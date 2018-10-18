@@ -3,6 +3,7 @@
 //  </copyright>
 
 using System;
+using A1QA.Core.Csharp.White.Basics.Reporting;
 using A1QA.Core.Csharp.White.UIElement.QAItems;
 using TestStack.White.UIItems;
 using TestStack.White.UIItems.Finders;
@@ -42,6 +43,10 @@ namespace A1QA.Core.Csharp.White.UIElement.Extentions
                 {
                     parent.ScrollBars.Vertical.ScrollDown();
                 }
+            }
+            else
+            {
+                Report.Output(Report.Level.Warning, "You have tried to scroll not scrollable item!");
             }
         }
 

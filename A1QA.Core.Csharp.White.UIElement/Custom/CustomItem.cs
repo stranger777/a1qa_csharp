@@ -2,6 +2,7 @@
 //   Copyright © 2017 A1QA. All Rights Reserved.
 //  </copyright>
 
+using System;
 using System.Windows.Automation;
 using TestStack.White.UIItems.Actions;
 using TestStack.White.UIItems.Custom;
@@ -18,6 +19,7 @@ namespace A1QA.Core.Csharp.White.UIElement.Custom
         /// <param name="actionListener">Action listener</param>
         public CustomItem(AutomationElement automationElement, ActionListener actionListener) : base(automationElement, actionListener)
         {
+            Console.Out.WriteLine(automationElement.Current.AutomationId);
         }
 
         protected CustomItem()
