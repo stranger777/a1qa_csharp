@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F062F10-7723-4CD0-A9F6-3125FE91D484}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>A1QA.Core.Csharp.White.UIElement</RootNamespace>
+    <AssemblyName>A1QA.Core.Csharp.White.UIElement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>..\waters.pko.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>true</DelaySign>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TechTalk.SpecFlow, Version=2.1.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpecFlow.2.1.0\lib\net45\TechTalk.SpecFlow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="TestStack.White, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2672efbf3e161801, processorArchitecture=MSIL">
+      <HintPath>..\packages\TestStack.White.0.13.3\lib\net40\TestStack.White.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIAutomationClient" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\CustomItem.cs" />
+    <Compile Include="Extentions\AutomationElementExtentions.cs" />
+    <Compile Include="Extentions\ScrollBarExtentions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="QAItems\QAApplication.cs" />
+    <Compile Include="QAItems\QAButton.cs" />
+    <Compile Include="QAItems\QACheckBox.cs" />
+    <Compile Include="QAItems\QACustomItems\QAContainer.cs" />
+    <Compile Include="QAItems\QADataGridItems\QAGridCell.cs" />
+    <Compile Include="QAItems\QADataGridItems\QADataGridColumn.cs" />
+    <Compile Include="QAItems\QADataGridItems\QADataGridRow.cs" />
+    <Compile Include="QAItems\QADataGridItems\QAWatDataGrid.cs" />
+    <Compile Include="QAItems\QADateTimePicker.cs" />
+    <Compile Include="QAItems\QAGroupBox.cs" />
+    <Compile Include="QAItems\QAHyperlink.cs" />
+    <Compile Include="QAItems\QAImage.cs" />
+    <Compile Include="QAItems\QAItem.cs" />
+    <Compile Include="QAItems\QALabel.cs" />
+    <Compile Include="QAItems\QAListBoxItems\QAComboBox.cs" />
+    <Compile Include="QAItems\QAListBoxItems\QAListBox.cs" />
+    <Compile Include="QAItems\QAListBoxItems\QAListItem.cs" />
+    <Compile Include="QAItems\QAListViewRow.cs" />
+    <Compile Include="QAItems\QAMenuItems\QAMenu.cs" />
+    <Compile Include="QAItems\QAPanel.cs" />
+    <Compile Include="QAItems\QAProgressBar.cs" />
+    <Compile Include="QAItems\QARadioButton.cs" />
+    <Compile Include="QAItems\QASlider.cs" />
+    <Compile Include="QAItems\QASpinner.cs" />
+    <Compile Include="QAItems\QATabItems\QATab.cs" />
+    <Compile Include="QAItems\QATabItems\QATabPage.cs" />
+    <Compile Include="QAItems\QATableItems\QATable.cs" />
+    <Compile Include="QAItems\QATableItems\QATableCell.cs" />
+    <Compile Include="QAItems\QATableItems\QATableColumn.cs" />
+    <Compile Include="QAItems\QATableItems\QATableRow.cs" />
+    <Compile Include="QAItems\QATextBox.cs" />
+    <Compile Include="QAItems\QAThumb.cs" />
+    <Compile Include="QAItems\QACustomItems\QAToolBar.cs" />
+    <Compile Include="QAItems\QAToolTip.cs" />
+    <Compile Include="QAItems\QATreeItems\QATree.cs" />
+    <Compile Include="QAItems\QATreeItems\QATreeNode.cs" />
+    <Compile Include="QAItems\QAUIItem.cs" />
+    <Compile Include="QAItems\QAWindowItems\QAWindow.cs" />
+    <Compile Include="QAItems\QAWindowItems\QATitleBar.cs" />
+    <Compile Include="QAItems\QAWindowStripControls\QAMenuBar.cs" />
+    <Compile Include="QAItems\QAWindowStripControls\QAStatusStrip.cs" />
+    <Compile Include="QAItems\QAWindowStripControls\QAToolStrip.cs" />
+    <Compile Include="xPathSearcher\SearchInfo.cs" />
+    <Compile Include="xPathSearcher\XmlSearcher.cs" />
+    <Compile Include="WorkSpace.cs" />
+    <Compile Include="Extentions\UIItemExtentions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\A1QA.Core.Csharp.White.Basics\A1QA.Core.Csharp.White.Basics.csproj">
+      <Project>{8c03097b-c1fd-447e-8acd-f415fa810f6a}</Project>
+      <Name>A1QA.Core.Csharp.White.Basics</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
