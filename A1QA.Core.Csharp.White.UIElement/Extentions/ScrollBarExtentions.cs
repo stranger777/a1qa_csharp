@@ -9,7 +9,7 @@ namespace A1QA.Core.Csharp.White.UIElement.Extentions
     public static class ScrollBarExtentions
     {
         /// <summary>
-        ///     Checks if scrollbar is scrolled to maximal value
+        ///     Scrolls UIItem vertically while input Item clickable point is not in parent bounds
         /// </summary>
         /// <param name="scrollBar"></param>
         /// <returns></returns>
