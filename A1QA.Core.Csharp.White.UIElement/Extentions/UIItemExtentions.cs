@@ -27,23 +27,7 @@ namespace A1QA.Core.Csharp.White.UIElement.Extentions
                 }
             }
         }
-
-        /// <summary>
-        ///     Scrolls UIItem vertically while input Item is offscreen
-        /// </summary>
-        /// <param name="item">UIItem that should be on screen</param>
-        public static void ScrollToOnScreenVertically(this UIItem parent, UIItem item)
-        {
-            if (parent.ScrollBars.Vertical.IsScrollable)
-            {
-                parent.ScrollBars.Vertical.SetToMinimum();
-
-                while (item.IsOffScreen && Math.Abs(parent.ScrollBars.Vertical.MaximumValue - parent.ScrollBars.Vertical.Value) > 0.1)
-                {
-                    parent.ScrollBars.Vertical.ScrollDown();
-                }
-            }
-        }
+        
 
         /// <summary>
         ///     Scrolls UIItem vertically while input Item clickable point is not in parent bounds

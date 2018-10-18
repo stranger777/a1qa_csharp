@@ -15,8 +15,6 @@ namespace A1QA.Core.Csharp.White.UIElement
 
         public static QAWindow MainWindow { get; set; }
 
-        public static string ApplicationName { get; set; }
-
         public static XmlDocument XmlDoc => MainWindow.GetHierarchy();
     }
 }
