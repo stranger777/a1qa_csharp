@@ -19,7 +19,7 @@ namespace A1QA.Core.Csharp.White.UIElement.Custom
         /// <param name="actionListener">Action listener</param>
         public CustomItem(AutomationElement automationElement, ActionListener actionListener) : base(automationElement, actionListener)
         {
-            Console.Out.WriteLine(automationElement.Current.Name);
+            Console.Out.WriteLine(automationElement.Current.AutomationId);
         }
 
         protected CustomItem()
